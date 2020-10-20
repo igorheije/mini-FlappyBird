@@ -149,7 +149,7 @@ function colidiu(passaro, barreiras){
 }
 
 function FlappyBird() {
-    jogando = false
+    
     let pontos = 0
 
     const areaDoJogo = document.querySelector('[wm-flappy]')
@@ -173,6 +173,7 @@ function FlappyBird() {
             passaro.animar()
 
             if(colidiu(passaro,barreiras)){
+                
                 clearInterval(temporizador)
             }
         }, 20)
@@ -180,11 +181,10 @@ function FlappyBird() {
     }
 
 }
+new FlappyBird().start()
 
 function iniciar(){
-    
-    new FlappyBird().start()
-    let jogando = true
-    
+    window.location.reload()
+
 }
 
